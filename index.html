@@ -494,7 +494,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                     <a><img src="img/f3_stair.jpg" class="center" style="object-fit:contain;
                         width:900px;
                         height:400px"></a>
-                <p>
+                <p style="font-size: 15px">
                 Consider the problem of personalizing content to a user's taste. Given the content \(c\), we intend to 
 				adjust the content with a linear filter \(h\). Our goal is to find the optimal filter \(h^*\) that will 
 				maximize the user's personal satisfaction \(f(h)\). Finding \(h^*\) is difficult because the user's 
@@ -505,7 +505,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 				B\) is of interest and the tradeoff between \(B\) and \(\hat{f}(\hat{h}^*)\) has been studied extensively.
                 </p>
 
-                <p>
+                <p style="font-size: 15px">
                 The above problem can be called \(``{filter querying}''\) where the user is queried using different filters 
 				\(h_i \in R^N\). In this paper, we discuss an extension to this problem where a  second type of querying is 
 				possible, called \(``{dimension querying}''\). With dimension querying, it is possible to query the user for 
@@ -516,7 +516,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 				can be very large, say \(8000\) Hz, hence it is prohibitive to query the user thousands of times.
                 </p>
                 
-                <p>
+                <p style="font-size: 15px">
                 To summarize, a filter query offers the advantage of understanding user satisfaction for a complete filter, 
 				while a dimension query gives optimal information for only one dimension at a time. This paper asks, for a 
 				given query budget \(B\), can the combination of two types of querying lead to higher user satisfaction compared 
@@ -524,17 +524,17 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 				application parameters?. The Optimization problem is put formally below:
 			    </p>
 				
-				<p>
+				<p style="font-size: 15px">
 				\[\text{argmin}_{\hat{h} \in \mathbf{R}^N} \quad ||f(\hat{h})-f(h^*)||_2\]
 				</p>
-				<p>
+				<p style="font-size: 15px">
 
 				\[\textrm{s.t.} \quad Q_f + Q_d \leq B\]
 </p>
-				<p>
+				<p style="font-size: 15px">
 				where, \(Q_f, Q_d\) are the number of filter and dimension queries described above, and the query budget \(B \ll N\).
 				</p>
-				<p>
+				<p style="font-size: 15px">
 				Our solution builds on past work that uses Gaussian Process Regression (GPR) as shown in the Figure below. Conventional GPR begins with a family 
 				of surrogate functions for \(f(h)\) and estimates a posterior on these functions, based on how well they satisfy the 
 				user's scores. Over time, GPR iterates through a two step process, first picking an optimal filter \(h_j\) to query 
@@ -542,7 +542,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 				until a desired criteria is met. The mean of this posterior \(\hat{f}(h)\) is now declared as the surrogate for \(f(h)\) and 
 				\(\hat{h}^* = \text{argmax} \hat{f}(h)\) is announced as the final personalization filter. 
 				
-				<p>
+				<p style="font-size: 15px">
 				The function to minimize typically, lies in a high dimensional space (i.e., \(h \in \mathcal{H} \subseteq \mathbf{R}^N, N \ge 500\)). 
 				We assume our function is sparse i.e., most dimensions do not influence \(f\) significantly, so \(f\) has ``low effective dimensions". 
 				We build upon a sparse Bayesian optimization framework to attain performance improvements independent of the sparsity technique. 
@@ -580,17 +580,17 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
             <div id="results_target" style="position: relative; top: -50px;"></div>
 	        <div id="results">
                 <h2><a class="subtitle">Synthetic Function Results</a></h2>
-                <p align="justify">
+                <p align="justify"; style="font-size: 15px">
                     We intend to characterize the performance of OracleBO for synthetic perception functions (with a staircase shape as shown in the Figure above)
                     We compare with several baselines as follows:
-                    </p><ul align="justify">
+                    </p><ul align="justify"; style="font-size: 15px">
                         <li>ALEBO [1] - SparseBO algorithm that only uses \(Q_f\) filter queries</li>
                         <li>OracleBO - Our proposed algorithm that combines filter \(Q_f\) and \(Q_d\) dimension queries.</li>
                  
                     </ul>
-                    Results below show that OracleBO outperforms ALEBO and achieves better minimum \(\hat{f}_{min}\). 
+                    <p style="font-size: 15px">Results below show that OracleBO outperforms ALEBO and achieves better minimum \(\hat{f}_{min}\). 
 					Moreover, the performance is improved with more \(Q_d\) queries. 
-                <p></p>
+                </p>
                 <!--a><img src="img/result1.jpg" style="object-fit:contain;
                             width:1000px;
                             height:300px"></a-->
@@ -608,7 +608,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
             <div id="demos">
                 <h2><a class="subtitle">Audio Personalization Results and Demo</a></h2>
 
-                <p align="justify">
+                <p align="justify"; style="font-size: 15px">
                     This section contains results from the Hearing Aids and Random faulty speaker experiments for three volunteers.
 					We show the audio filtered with the user's personal filter predicted by OracleBO using \(Q_d = 5\) dimension queries 
 					and \(Q_f={5,10,15,20,25}\) filter queries. 
@@ -618,7 +618,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                 <h2><a class="subtitle">Audio Demos</a></h2>
 				<br>
 				<h4><a class="subtitle">Audiogram Filter Demo</a></h4>
-                <p align="justify">
+                <p align="justify"; style="font-size: 15px">
                     We show \(\texttt corrupted\) Audio clip with hearing loss, \(\texttt baseline\) clip, 
 					and audio filtered with \(\hat{h}^*\) for \(Q_f={5,10,15,20,25}\) filter queries. We observe that the personal filter
 					predicted by OracleBO improves with more \(Q_f\) filter queries. The audiogram \(\texttt baseline\) is good because Human Audio hearing response is mostly 
@@ -816,7 +816,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                 </table>
                 <br><br>
 				<h4><a class="subtitle">Random Filter Demo</a></h4>
-				<p align="justify">
+				<p align="justify"; style="font-size: 15px">
                     We show \(\texttt corrupted\) Audio clip with hearing loss, \(\texttt baseline\) clip, 
 					and audio filtered with \(\hat{h}^*\) for \(Q_f={5,10,15,20,25}\) filter queries. We observe that the personal filter
 					predicted by OracleBO improves with more \(Q_f\) filter queries. For a random filter, we see that OracleBO offers greater imorovement over 
@@ -1005,7 +1005,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                 </table>
                 <br><br>
                 <h4><a class="subtitle">User Satisfaction Score Results</a></h2>
-                <p align="justify">
+                <p align="justify"; style="font-size: 15px">
                     The figure below shows the User Satisfaction Scores for Audiogram (a) and Random (b) filters corresponding to the Audio clips above.  
                 </p>
 
@@ -1022,7 +1022,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
             <div id="code">
                 <h1><a class="subtitle">Codes and Data</a></h1>
                 
-                <p align="justify">
+                <p align="justify"; style="font-size: 15px">
                     We have published the code and the dataset on Github: 
                     <a href="https://github.com/OracleBO/OracleBO.git">Github link to the dataset</a>.
                 </p>
@@ -1032,11 +1032,11 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
             <div id="references">
                 <h1><a class="subtitle">References</a></h1>
                 
-                <p align="justify">
+                <p align="justify"; style="font-size: 15px">
                     [1] Letham, B.; Calandra, R.; Rai, A.; and Bakshy, E. 2020. Re-examining linear embeddings for high-dimensional
 			Bayesian optimization. Advances in neural information processing systems, 33: 1546–1558
                 </p>
-                <p align="justify">
+                <p align="justify"; style="font-size: 15px">
                 [2] NHANES CDC. 2011. Centers for Disease Control and Prevention (CDC). National Center for Health Statistics (NCHS). 
 		National Health and Nutrition Examination Survey Data, Hyattsville, MD
                 </p>
