@@ -617,8 +617,8 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 					</p>
 					
 				<p align="justify"; style="font-size: 15px"> We compare the user satisfaction scores of the following methods:
-						<ul><li style="font-size: 15px">\(\texttt corrupted\): The corrupted audio (audio as heard by a person with hearing loss or from cheap speakers). The user satisfaction score for this clip will obviously be low and needs to be improved upon by other methods. </li>
-                        <li style="font-size: 15px">\(\texttt baseline\): The input audio is filtered by a personalization filter contructed by simple linear 
+						<ul><li style="font-size: 15px">\(\texttt Corrupted\): The corrupted audio (audio as heard by a person with hearing loss or from cheap speakers). The user satisfaction score for this clip will obviously be low and needs to be improved upon by other methods. </li>
+                        <li style="font-size: 15px">\(\texttt Baseline\): The input audio is filtered by a personalization filter contructed by simple linear 
 						interpolation of either: 
 						<ul><li style="font-size: 15px">The hearing loss response measurements (usually measured at \(5\) frequencies i.e., \((500,1000,2000,5000,4000) Hz\) called an ``Audiogram".</li> 
 						<li style="font-size: 15px"> The random filter response measurements at the same \(5\) frequencies.</li></ul></li>
@@ -631,9 +631,9 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 				<br>
 				<h4><a class="subtitle">Audiogram Filter Demo</a></h4>
                 <p align="justify"; style="font-size: 15px">
-                    We show \(\texttt corrupted \) Audio clip with hearing loss, \(\texttt baseline\) clip, 
+                    We show \(\texttt Corrupted \) Audio clip with hearing loss, \(\texttt Baseline\) clip, 
 					and audio filtered with OracleBO's personal filter, \(\hat{h}^*\) for \(Q_f={5,10,15,20,25}\) filter queries. We observe that the personal filter
-					predicted by OracleBO improves with more \(Q_f\) filter queries. The audiogram \(\texttt baseline\) is good because Human Audio hearing response is mostly 
+					predicted by OracleBO improves with more \(Q_f\) filter queries. The audiogram \(\texttt Baseline\) is good because Human Audio hearing response is mostly 
 					flat across frequency octaves. OracleBO achieves better satisfaction over \(\texttt baseline\) after \(Q_f=20\) queries.
                 </p>
                 <table class="audio_demos">
@@ -829,10 +829,10 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                 <br><br>
 				<h4><a class="subtitle">Random Filter Demo</a></h4>
 				<p align="justify"; style="font-size: 15px">
-                    We show \(\texttt corrupted\) Audio clip with random distortion, \(\texttt baseline\) clip, 
+                    We show \(\texttt Corrupted\) Audio clip with random distortion, \(\texttt Baseline\) clip, 
 					and audio filtered with OracleBO's personal filter, \(\hat{h}^*\) for \(Q_f={5,10,15,20,25}\) filter queries. We observe that the personal filter
 					predicted by OracleBO improves with more \(Q_f\) filter queries. For a random filter, we see that OracleBO offers greater improvement over 
-					the \(\texttt baseline\) after \(Q_f=15\) queries.		
+					the \(\texttt Baseline\) after \(Q_f=15\) queries.		
                 </p>
                 <table class="audio_demos">
                     <thead>
