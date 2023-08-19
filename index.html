@@ -610,7 +610,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 				<br>
                 <p align="justify"; style="font-size: 15px">
 					The Figure below shows the flow of operations for testing with real volunteers. We take an audio clip (<b>Ground Truth</b>) and first deliberately corrupt it
-					and obtain the user satisfaction score for this clip (other methods must improve this score). We then analyze how a baseline (Interpolation) filter and OracleBO improve user satisfaction through querying and user feedback.
+					and obtain the user satisfaction score for this clip (any other method must improve upon this score). We then analyze how a Baseline (Interpolation) filter and OracleBO improve user satisfaction through querying and user feedback.
 					</p>
 					<br>
 					<a><img src="img/demo.png" style="object-fit:contain;
@@ -627,9 +627,9 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 					
 				<br>
 				<h4><a class="subtitle">Baseline</a></h4>
-				<p align="justify"; style="font-size: 15px">Our baseline (interpolation) filter uses dimension queries \(Q_d\). These dimension queries are essentially the
-				user's feedback for \(Q_d\) frequency tones (typically, \(Q_d=5\) queries are measured at frequencies: \((500,1000,2000,5000,4000) Hz\)). We then interpolate this user feedback to obtain the baseline filter. This interpolated filter is then used to compensate for the corruption (this final filter
-				is called an ``Audiogram" when the corruption is due to hearing loss). This process (see paper for details) is exactly as performed by audio clinics today to configure hearing aids for each individual.</p>
+				<p align="justify"; style="font-size: 15px">Our Baseline (interpolation) filter uses dimension queries \(Q_d\). These dimension queries are essentially the
+				user's feedback for \(Q_d\) frequency tones (typically, \(Q_d=5\) queries are measured at frequencies: \((500,1000,2000,5000,4000) Hz\)). We then interpolate this user feedback to obtain the Baseline filter. This interpolated filter is then used to compensate for the corruption (this final filter
+				is called an ``Audiogram" when the corruption is due to hearing loss). This process (see paper for details) models how today's audio clinics configure hearing aids for each individual.</p>
 				<br>
 				<h4><a class="subtitle">OracleBO</a></h4>
 				<p align="justify"; style="font-size: 15px"> With OracleBO, we pretend that the user has come back home from the audio clinic with the audiogram (Baseline) filter. OracleBO now plays audio clips that are filtered 
@@ -637,7 +637,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 				the iterations with increasing filter queries (\(Q_f =\)<FONT COLOR="GREEN">1</FONT>, <FONT COLOR="RED">2</FONT>,<FONT COLOR="BLUE">3</FONT> ...).</p>
 				
 				<br>
-				<h2><a class="subtitle">Audio Demos</a></h2>
+				<h2><a class="subtitle">Audio Demos*</a></h2>
 				<br>
 				<p align="justify"; style="font-size: 15px">The audio demo below has 2 tables: (1) the hearing loss corruption case, and (2) the random corruption case. The table columns
 				are example audio clips heard by three different users (U1, U2, U3). The table rows indicate the following:
@@ -670,6 +670,12 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                 
                 <h2><a class="subtitle">Audio Demos</a></h2-->
 				<br>
+				<p align="justify"; style="font-size: 15px"><FONT COLOR="RED">*Note: The audio quality you hear in the following
+				demos will be influenced by the frequency response of your speaker and the differences in each users' perception of the audio.
+				Hence the quality you experience will not accurately reflect the quality perceived by users U1, U2, U3. 
+				OracleBO is actually compensating for the user’s speaker’s response function as well, hence users U1, U2, U3 should have 
+				heard a better quality.“.</FONT>
+				<br><br>
 				<h4><a class="subtitle">The Hearing Loss Corruption case</a></h4><br>
                 <!--p align="justify"; style="font-size: 15px">
                     We show \(\texttt Corrupted \) Audio clip with hearing loss, \(\texttt Baseline\) clip, 
@@ -1056,6 +1062,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 
                     </tbody>
                 </table>
+				
                 <br><br>
                 <h4><a class="subtitle">User Satisfaction Score Results</a></h2><br>
                 <p align="justify"; style="font-size: 15px">
